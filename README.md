@@ -2,5 +2,5 @@
 
 Welcome! 
 
-This is repository featuring my mathematical explorations. 
+This is a repository featuring my mathematical explorations. 
 I hope you find the material intriguing and enjoyable. Cheers!

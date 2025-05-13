@@ -1,0 +1,30 @@
+\documentclass[
+%% TIKZ_CLASSOPTION %%
+tikz
+]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{matrix}
+%% EXTRA_TIKZ_PREAMBLE_CODE %%
+\begin{document}
+%% TIKZ_CODE %%
+\begin{tikzpicture}
+% Draw the triangle and the right angle
+\draw (0,0)--(10,0)--(6,6)--cycle;
+\draw (6,6)--(6,0);
+\draw (6,0)  rectangle (6.5,0.5);
+
+% Draw the vertex labels
+\node[left] at (0,0) {\( C(0, 0) \)};
+\node[above] at (6,6) {\( A(\sqrt{b^2 - h^2}, h) \)};
+\node[right] at (10,0) {\( B(a, 0) \)};
+
+% Label the sides
+\node[below] at (5.5,0) {\( a \)};
+\node[left] at (3,3) {\( b \)};
+\node[right] at (8,3) {\( c \)};
+
+% Give labels to the two subdivisions of the base
+\node[above] at (3,0) {\( \sqrt{b^2 - h^2} \)};
+\node[above] at (8,0) {\( a - \sqrt{b^2 - h^2} \)};
+\end{tikzpicture}
+\end{document}

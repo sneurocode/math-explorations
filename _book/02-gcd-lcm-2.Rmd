@@ -44,7 +44,7 @@ $$
 \end{aligned}
 $$
 
-The following Python code demonstrates how to programmatically determine the GCD and LCM of more than two numbers. The Python code relies on the function definitions for the gcd() and lcm() funtions from the [previous GCD and LCM post](https://sneurocode.github.io/math-explorations/gcd-and-lcm-1.html).
+The following Python code demonstrates how to programmatically determine the GCD and LCM of more than two numbers. The Python code relies on the function definitions for the gcd() and lcm() funtions from the [previous GCD and LCM post](./02-gcd-lcm-2.Rmd).
 
 ``` python
 # Assuming the gcd and lcm functions have already being

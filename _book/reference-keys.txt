@@ -1,0 +1,4 @@
+gcd-and-lcm-1
+gcd-and-lcm-2
+factorial
+proving-herons-formula

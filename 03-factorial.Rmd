@@ -1,0 +1,27 @@
+# Factorial
+
+The factorial of a natural number $n$, that is, $n!$ is that number multiplied by all the natural numbers less than that number. Thus, $4! = 4 \times 3 \times 2 \times 1 = 24$. By definition, $0! = 1$.
+
+The Python code below demonstrates how to programmatically determine the factorial of a natural number both non-recursively and using recursion.
+
+``` python
+def fact(n):
+    list_n = list(range(1, n + 1))
+    product = 1
+    for number in list_n:
+        product *= number
+
+    return product
+
+# Test factorial function: fact
+print("Factorial of 5: ", fact(5))  # Ans: 120
+
+def fact_r(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fact_r(n - 1)
+
+# Test recursive factorial function: fact_r
+print("Recursive factorial of 4: ", fact_r(4))  # Ans: 24
+```

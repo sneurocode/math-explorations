@@ -1,0 +1,33 @@
+---
+title: "Math Explorations"
+author: "Saviour Elikplim Animdife"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://sneurocode.github.io/math-explorations
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a little book detailing my findings in the realm of mathematics.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: sneurocode/math-explorations
+---
+
+# Preface {.unnumbered}
+
+------------------------------------------------------------------------
+
+Here, you will encounter my findings on my journey through the world of mathematics. I hope you find the material rewarding and worth exploring. Cheers!
+
+[Download the PDF version](https://github.com/sneurocode/math-explorations/blob/master/docs/_main.pdf)
+
+© 2025 *Saviour E. Animdife*
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

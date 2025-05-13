@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 GCD and LCM | 03-factorial</title>
+  <meta name="description" content="<p>This is a little book detailing my findings in the realm of mathematics.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 GCD and LCM | 03-factorial" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a little book detailing my findings in the realm of mathematics.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="sneurocode/math-explorations" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 GCD and LCM | 03-factorial" />
+  
+  <meta name="twitter:description" content="<p>This is a little book detailing my findings in the realm of mathematics.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Saviour Elikplim Animdife" />
+
+
+<meta name="date" content="2025-05-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="gcd-and-lcm-2.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Math Explorations</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="gcd-and-lcm.html"><a href="gcd-and-lcm.html"><i class="fa fa-check"></i><b>1</b> GCD and LCM</a></li>
+<li class="chapter" data-level="2" data-path="gcd-and-lcm-2.html"><a href="gcd-and-lcm-2.html"><i class="fa fa-check"></i><b>2</b> GCD and LCM 2</a></li>
+<li class="chapter" data-level="3" data-path="factorial.html"><a href="factorial.html"><i class="fa fa-check"></i><b>3</b> Factorial</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">03-factorial</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="gcd-and-lcm" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> GCD and LCM<a href="gcd-and-lcm.html#gcd-and-lcm" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The GCD or greatest common divisor of two natural numbers (positive whole numbers) <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the largest number that can divide the two numbers without a remainder. For example, if we take <span class="math inline">\(10\)</span> and <span class="math inline">\(20\)</span> as our two natural numbers, <span class="math inline">\(5\)</span> divides both without a remainder; <span class="math inline">\(\frac{10}{5} = 2\)</span> and <span class="math inline">\(\frac{20}{5} = 4\)</span>. However, <span class="math inline">\(5\)</span> is not the largest number that can divide the two numbers without a remainder. The largest number that can do this is <span class="math inline">\(10\)</span> itself.</p>
+<p>To learn how to use the Euclidean algorithm to work out GCDs by hand, refer to this site: <a href="https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html" class="uri">https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html</a>.</p>
+<p>As an example, say we want to find the GCD of 90 and 35, then:
+<span class="math display">\[
+\begin{aligned}
+\text{gcd}(90, 35) &amp;= \text{gcd}(35, 20) \\
+&amp;= \text{gcd}(20, 15) \\
+&amp;= \text{gcd}(15, 5) \\
+&amp;= \text{gcd}(5, 0) \\
+\text{Thus, gcd}(90, 35) &amp;= 5
+\end{aligned}
+\]</span></p>
+<p>The LCM is similar but as its name lowest common multiple suggests, the LCM of two natural numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the smallest number <span class="math inline">\(c\)</span> that is a multiple of <span class="math inline">\(a\)</span> and is also a multiple of <span class="math inline">\(b\)</span>. As an example, if we take two numbers <span class="math inline">\(8\)</span> and <span class="math inline">\(4\)</span>, <span class="math inline">\(16\)</span> is a multiple of both numbers but is not the smallest number that is a multiple of both numbers; the smallest number that is is <span class="math inline">\(8\)</span> itself. Thus, the <span class="math inline">\(\text{LCM}(8, 4)\)</span> is <span class="math inline">\(8\)</span>.</p>
+<p>The example below shows how to find the LCM of two natural numbers 500 and 75.</p>
+<p>First, find the GCD of 500 and 75 using the Euclidean algorithm and then use the LCM formula to calculate the LCM based on the GCD and the absolute multiple of the two numbers.
+<span class="math display">\[
+\begin{aligned}
+\text{gcd}(500, 75) &amp;= \text{gcd}(75, 50) \\
+&amp;= \text{gcd}(50, 25) \\
+&amp;= \text{gcd}(25, 0) \\
+\text{So, gcd}(500, 75) &amp;= 25 \\
+\\
+\text{lcm}(500, 75) &amp;= \frac{\lvert 500 \times 75 \rvert}{\text{gcd}(500, 75)} \\
+&amp;= \frac{\lvert 37,500 \rvert}{25} \\
+&amp;= \frac{37,500}{25} \\
+&amp;= 1,500 \\
+\text{So, lcm}(500, 75) &amp;= 1,500
+\end{aligned}
+\]</span></p>
+<p>The Python code below demonstrates how to obtain the GCD and LCM of two natural numbers programmatically.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="gcd-and-lcm.html#cb1-1" tabindex="-1"></a><span class="co"># Find GCD(a, b) using the Euclidean algorithm</span></span>
+<span id="cb1-2"><a href="gcd-and-lcm.html#cb1-2" tabindex="-1"></a><span class="kw">def</span> gcd(a, b):</span>
+<span id="cb1-3"><a href="gcd-and-lcm.html#cb1-3" tabindex="-1"></a>    smaller <span class="op">=</span> <span class="bu">min</span>(a, b)</span>
+<span id="cb1-4"><a href="gcd-and-lcm.html#cb1-4" tabindex="-1"></a>    bigger <span class="op">=</span> <span class="bu">max</span>(a, b)</span>
+<span id="cb1-5"><a href="gcd-and-lcm.html#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="gcd-and-lcm.html#cb1-6" tabindex="-1"></a>    <span class="cf">while</span> (smaller <span class="op">!=</span> <span class="dv">0</span>):</span>
+<span id="cb1-7"><a href="gcd-and-lcm.html#cb1-7" tabindex="-1"></a>        next_bigger <span class="op">=</span> smaller</span>
+<span id="cb1-8"><a href="gcd-and-lcm.html#cb1-8" tabindex="-1"></a>        smaller <span class="op">=</span> bigger <span class="op">%</span> smaller</span>
+<span id="cb1-9"><a href="gcd-and-lcm.html#cb1-9" tabindex="-1"></a>        bigger <span class="op">=</span> next_bigger</span>
+<span id="cb1-10"><a href="gcd-and-lcm.html#cb1-10" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="gcd-and-lcm.html#cb1-11" tabindex="-1"></a>    <span class="cf">return</span> bigger</span>
+<span id="cb1-12"><a href="gcd-and-lcm.html#cb1-12" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="gcd-and-lcm.html#cb1-13" tabindex="-1"></a><span class="co"># Find LCM(a, b)</span></span>
+<span id="cb1-14"><a href="gcd-and-lcm.html#cb1-14" tabindex="-1"></a><span class="kw">def</span> lcm(a, b):</span>
+<span id="cb1-15"><a href="gcd-and-lcm.html#cb1-15" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">int</span>(<span class="bu">abs</span>(a <span class="op">*</span> b) <span class="op">/</span> gcd(a, b))</span>
+<span id="cb1-16"><a href="gcd-and-lcm.html#cb1-16" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="gcd-and-lcm.html#cb1-17" tabindex="-1"></a><span class="co"># Test LCM and GCD</span></span>
+<span id="cb1-18"><a href="gcd-and-lcm.html#cb1-18" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;LCM(500, 75): &quot;</span>, lcm(<span class="dv">500</span>, <span class="dv">75</span>))</span></code></pre></div>
+<p>Parting words: Hopefully, you now understand how the LCM and GCD of two natural numbers are calculated or computed both by hand and programmatically.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gcd-and-lcm-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/sneurocode/math-explorations/edit/docs/01-gcd-lcm-1.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

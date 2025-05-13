@@ -1,0 +1,62 @@
+# GCD and LCM 1
+
+The GCD or greatest common divisor of two natural numbers (positive whole numbers) $a$ and $b$ is the largest number that can divide the two numbers without a remainder. For example, if we take $10$ and $20$ as our two natural numbers, $5$ divides both without a remainder; $\frac{10}{5} = 2$ and $\frac{20}{5} = 4$. However, $5$ is not the largest number that can divide the two numbers without a remainder. The largest number that can do this is $10$ itself.
+
+To learn how to use the Euclidean algorithm to work out GCDs by hand, refer to this site: <https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html>.
+
+As an example, say we want to find the GCD of 90 and 35, then: 
+$$
+\begin{aligned}
+\text{gcd}(90, 35) &= \text{gcd}(35, 20) \\
+&= \text{gcd}(20, 15) \\
+&= \text{gcd}(15, 5) \\
+&= \text{gcd}(5, 0) \\
+\text{Thus, gcd}(90, 35) &= 5
+\end{aligned}
+$$
+
+The LCM is similar but as its name lowest common multiple suggests, the LCM of two natural numbers $a$ and $b$ is the smallest number $c$ that is a multiple of $a$ and is also a multiple of $b$. As an example, if we take two numbers $8$ and $4$, $16$ is a multiple of both numbers but is not the smallest number that is a multiple of both numbers; the smallest number that is is $8$ itself. Thus, the $\text{LCM}(8, 4)$ is $8$.
+
+The example below shows how to find the LCM of two natural numbers 500 and 75.
+
+First, find the GCD of 500 and 75 using the Euclidean algorithm and then use the LCM formula to calculate the LCM based on the GCD and the absolute multiple of the two numbers. 
+$$
+\begin{aligned}
+\text{gcd}(500, 75) &= \text{gcd}(75, 50) \\
+&= \text{gcd}(50, 25) \\
+&= \text{gcd}(25, 0) \\
+\text{So, gcd}(500, 75) &= 25 \\
+ \\
+\text{lcm}(500, 75) &= \frac{\lvert 500 \times 75 \rvert}{\text{gcd}(500, 75)} \\
+&= \frac{\lvert 37,500 \rvert}{25} \\
+&= \frac{37,500}{25} \\
+&= 1,500 \\
+\text{So, lcm}(500, 75) &= 1,500
+\end{aligned}
+$$
+
+The Python code below demonstrates how to obtain the GCD and LCM of two natural numbers programmatically.
+
+
+``` python
+# Find GCD(a, b) using the Euclidean algorithm
+def gcd(a, b):
+    smaller = min(a, b)
+    bigger = max(a, b)
+
+    while (smaller != 0):
+        next_bigger = smaller
+        smaller = bigger % smaller
+        bigger = next_bigger
+
+    return bigger
+
+# Find LCM(a, b)
+def lcm(a, b):
+    return int(abs(a * b) / gcd(a, b))
+
+# Test LCM and GCD
+print("LCM(500, 75): ", lcm(500, 75))
+```
+
+Parting words: Hopefully, you now understand how the LCM and GCD of two natural numbers are calculated or computed both by hand and programmatically.

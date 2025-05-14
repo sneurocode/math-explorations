@@ -1,3 +1,8 @@
+.scroll-wrapper {
+      overflow-x:scroll;
+      white-space: nowrap;
+      max-width: none;
+}
 p.caption {
   color: #777;
   margin-top: 10px;

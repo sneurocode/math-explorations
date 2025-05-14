@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Saviour Elikplim Animdife" />
 
 
-<meta name="date" content="2025-05-13" />
+<meta name="date" content="2025-05-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,8 +176,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 1</span> GCD and LCM 1<a href="gcd-and-lcm-1.html#gcd-and-lcm-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The GCD or greatest common divisor of two natural numbers (positive whole numbers) <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the largest number that can divide the two numbers without a remainder. For example, if we take <span class="math inline">\(10\)</span> and <span class="math inline">\(20\)</span> as our two natural numbers, <span class="math inline">\(5\)</span> divides both without a remainder; <span class="math inline">\(\frac{10}{5} = 2\)</span> and <span class="math inline">\(\frac{20}{5} = 4\)</span>. However, <span class="math inline">\(5\)</span> is not the largest number that can divide the two numbers without a remainder. The largest number that can do this is <span class="math inline">\(10\)</span> itself.</p>
 <p>To learn how to use the Euclidean algorithm to work out GCDs by hand, refer to this site: <a href="https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html" class="uri">https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html</a>.</p>
-<p>As an example, say we want to find the GCD of 90 and 35, then:
-<span class="math display">\[
+As an example, say we want to find the GCD of 90 and 35, then:
+<div class="scroll-wrapper" markdown="block">
+<p><span class="math display">\[
 \begin{aligned}
 \text{gcd}(90, 35) &amp;= \text{gcd}(35, 20) \\
 &amp;= \text{gcd}(20, 15) \\
@@ -186,10 +187,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \text{Thus, gcd}(90, 35) &amp;= 5
 \end{aligned}
 \]</span></p>
+</div>
 <p>The LCM is similar but as its name lowest common multiple suggests, the LCM of two natural numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the smallest number <span class="math inline">\(c\)</span> that is a multiple of <span class="math inline">\(a\)</span> and is also a multiple of <span class="math inline">\(b\)</span>. As an example, if we take two numbers <span class="math inline">\(8\)</span> and <span class="math inline">\(4\)</span>, <span class="math inline">\(16\)</span> is a multiple of both numbers but is not the smallest number that is a multiple of both numbers; the smallest number that is is <span class="math inline">\(8\)</span> itself. Thus, the <span class="math inline">\(\text{LCM}(8, 4)\)</span> is <span class="math inline">\(8\)</span>.</p>
 <p>The example below shows how to find the LCM of two natural numbers 500 and 75.</p>
-<p>First, find the GCD of 500 and 75 using the Euclidean algorithm and then use the LCM formula to calculate the LCM based on the GCD and the absolute multiple of the two numbers.
-<span class="math display">\[
+<p>First, find the GCD of 500 and 75 using the Euclidean algorithm and then use the LCM formula to calculate the LCM based on the GCD and the absolute multiple of the two numbers.</p>
+<div class="scroll-wrapper" markdown="block">
+<p><span class="math display">\[
 \begin{aligned}
 \text{gcd}(500, 75) &amp;= \text{gcd}(75, 50) \\
 &amp;= \text{gcd}(50, 25) \\
@@ -203,6 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \text{So, lcm}(500, 75) &amp;= 1,500
 \end{aligned}
 \]</span></p>
+</div>
 <p>The Python code below demonstrates how to obtain the GCD and LCM of two natural numbers programmatically.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="gcd-and-lcm-1.html#cb1-1" tabindex="-1"></a><span class="co"># Find GCD(a, b) using the Euclidean algorithm</span></span>
 <span id="cb1-2"><a href="gcd-and-lcm-1.html#cb1-2" tabindex="-1"></a><span class="kw">def</span> gcd(a, b):</span>

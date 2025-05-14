@@ -122,7 +122,7 @@
 
 \title{Math Explorations}
 \author{Saviour Elikplim Animdife}
-\date{2025-05-13}
+\date{2025-05-14}
 
 \begin{document}
 \maketitle
@@ -149,6 +149,7 @@ The GCD or greatest common divisor of two natural numbers (positive whole number
 To learn how to use the Euclidean algorithm to work out GCDs by hand, refer to this site: \url{https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html}.
 
 As an example, say we want to find the GCD of 90 and 35, then:
+
 \[
 \begin{aligned}
 \text{gcd}(90, 35) &= \text{gcd}(35, 20) \\
@@ -164,6 +165,7 @@ The LCM is similar but as its name lowest common multiple suggests, the LCM of t
 The example below shows how to find the LCM of two natural numbers 500 and 75.
 
 First, find the GCD of 500 and 75 using the Euclidean algorithm and then use the LCM formula to calculate the LCM based on the GCD and the absolute multiple of the two numbers.
+
 \[
 \begin{aligned}
 \text{gcd}(500, 75) &= \text{gcd}(75, 50) \\
@@ -211,6 +213,7 @@ Parting words: Hopefully, you now understand how the LCM and GCD of two natural 
 Previously, we looked at how to compute the GCD and LCM of two natural numbers both by hand and programmatically. However, what if we are interested in determining the GCD and LCM of four, five or any number of natural numbers? How do we do this? The answer is simple: break down the problem into manageable pieces which you then work through. So, for four numbers, we would find the GCD of the first two numbers, take that answer and find the GCD of the answer and the third number and finally find the GCD of the resulting answer and the last number. The same applies to the LCM. Finding the GCD and the LCM of more than two natural numbers is thus an iterative process that involves repeated use of the GCD and LCM functions for two natural numbers.
 
 As an example, let us find the GCD of the numbers 500, 8, 50 and 70.
+
 \[
 \begin{aligned}
 \text{gcd}(500, 8) &= \text{gcd}(8, 4)  \\
@@ -230,6 +233,7 @@ As an example, let us find the GCD of the numbers 500, 8, 50 and 70.
 \]
 
 Also, let's find the LCM of the four numbers 500, 8, 50 and 70.
+
 \[
 \begin{aligned}
 \text{lcm}(500, 8) &= \frac{|500 \times 8|}{\text{gcd}(500, 8)} \\

@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Saviour Elikplim Animdife" />
 
 
-<meta name="date" content="2025-05-13" />
+<meta name="date" content="2025-05-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,8 +175,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="gcd-and-lcm-2" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> GCD and LCM 2<a href="gcd-and-lcm-2.html#gcd-and-lcm-2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Previously, we looked at how to compute the GCD and LCM of two natural numbers both by hand and programmatically. However, what if we are interested in determining the GCD and LCM of four, five or any number of natural numbers? How do we do this? The answer is simple: break down the problem into manageable pieces which you then work through. So, for four numbers, we would find the GCD of the first two numbers, take that answer and find the GCD of the answer and the third number and finally find the GCD of the resulting answer and the last number. The same applies to the LCM. Finding the GCD and the LCM of more than two natural numbers is thus an iterative process that involves repeated use of the GCD and LCM functions for two natural numbers.</p>
-<p>As an example, let us find the GCD of the numbers 500, 8, 50 and 70.
-<span class="math display">\[
+<p>As an example, let us find the GCD of the numbers 500, 8, 50 and 70.</p>
+<div class="scroll-wrapper" markdown="block">
+<p><span class="math display">\[
 \begin{aligned}
 \text{gcd}(500, 8) &amp;= \text{gcd}(8, 4)  \\
 &amp;= \text{gcd}(4, 0) \\
@@ -193,8 +194,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \text{So, the GCD of 500, 8, 50 and 70} &amp;= 2
 \end{aligned}
 \]</span></p>
-<p>Also, let’s find the LCM of the four numbers 500, 8, 50 and 70.
-<span class="math display">\[
+</div>
+<p>Also, let’s find the LCM of the four numbers 500, 8, 50 and 70.</p>
+<div class="scroll-wrapper" markdown="block">
+<p><span class="math display">\[
 \begin{aligned}
 \text{lcm}(500, 8) &amp;= \frac{|500 \times 8|}{\text{gcd}(500, 8)} \\
 &amp;= \frac{\text{4,000}}{4} \\
@@ -215,6 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \text{Hence, the LCM of 500, 8, 50 and 70} &amp;= \text{7,000}
 \end{aligned}
 \]</span></p>
+</div>
 <p>The following Python code demonstrates how to programmatically determine the GCD and LCM of more than two numbers. The Python code relies on the function definitions for the gcd() and lcm() funtions from the <a href="https://sneurocode.github.io/math-explorations/gcd-and-lcm-1.html">previous GCD and LCM post</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="gcd-and-lcm-2.html#cb2-1" tabindex="-1"></a><span class="co"># Assuming the gcd and lcm functions have already being</span></span>
 <span id="cb2-2"><a href="gcd-and-lcm-2.html#cb2-2" tabindex="-1"></a><span class="co"># defined or imported</span></span>

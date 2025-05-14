@@ -3,6 +3,8 @@
 Previously, we looked at how to compute the GCD and LCM of two natural numbers both by hand and programmatically. However, what if we are interested in determining the GCD and LCM of four, five or any number of natural numbers? How do we do this? The answer is simple: break down the problem into manageable pieces which you then work through. So, for four numbers, we would find the GCD of the first two numbers, take that answer and find the GCD of the answer and the third number and finally find the GCD of the resulting answer and the last number. The same applies to the LCM. Finding the GCD and the LCM of more than two natural numbers is thus an iterative process that involves repeated use of the GCD and LCM functions for two natural numbers.
 
 As an example, let us find the GCD of the numbers 500, 8, 50 and 70. 
+
+<div class="scroll-wrapper" markdown="block">
 $$
 \begin{aligned}
 \text{gcd}(500, 8) &= \text{gcd}(8, 4)  \\
@@ -20,8 +22,11 @@ $$
 \text{So, the GCD of 500, 8, 50 and 70} &= 2
 \end{aligned}
 $$
+</div>
 
 Also, let's find the LCM of the four numbers 500, 8, 50 and 70. 
+
+<div class="scroll-wrapper" markdown="block">
 $$
 \begin{aligned}
 \text{lcm}(500, 8) &= \frac{|500 \times 8|}{\text{gcd}(500, 8)} \\
@@ -43,6 +48,7 @@ $$
 \text{Hence, the LCM of 500, 8, 50 and 70} &= \text{7,000}
 \end{aligned}
 $$
+</div>
 
 The following Python code demonstrates how to programmatically determine the GCD and LCM of more than two numbers. The Python code relies on the function definitions for the gcd() and lcm() funtions from the [previous GCD and LCM post](https://sneurocode.github.io/math-explorations/gcd-and-lcm-1.html).
 

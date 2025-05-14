@@ -5,6 +5,7 @@ The GCD or greatest common divisor of two natural numbers (positive whole number
 To learn how to use the Euclidean algorithm to work out GCDs by hand, refer to this site: <https://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html>.
 
 As an example, say we want to find the GCD of 90 and 35, then: 
+<div class="scroll-wrapper" markdown="block">
 $$
 \begin{aligned}
 \text{gcd}(90, 35) &= \text{gcd}(35, 20) \\
@@ -14,12 +15,15 @@ $$
 \text{Thus, gcd}(90, 35) &= 5
 \end{aligned}
 $$
+</div>
 
 The LCM is similar but as its name lowest common multiple suggests, the LCM of two natural numbers $a$ and $b$ is the smallest number $c$ that is a multiple of $a$ and is also a multiple of $b$. As an example, if we take two numbers $8$ and $4$, $16$ is a multiple of both numbers but is not the smallest number that is a multiple of both numbers; the smallest number that is is $8$ itself. Thus, the $\text{LCM}(8, 4)$ is $8$.
 
 The example below shows how to find the LCM of two natural numbers 500 and 75.
 
 First, find the GCD of 500 and 75 using the Euclidean algorithm and then use the LCM formula to calculate the LCM based on the GCD and the absolute multiple of the two numbers. 
+
+<div class="scroll-wrapper" markdown="block">
 $$
 \begin{aligned}
 \text{gcd}(500, 75) &= \text{gcd}(75, 50) \\
@@ -34,6 +38,7 @@ $$
 \text{So, lcm}(500, 75) &= 1,500
 \end{aligned}
 $$
+</div>
 
 The Python code below demonstrates how to obtain the GCD and LCM of two natural numbers programmatically.
 

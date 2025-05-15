@@ -1,7 +1,8 @@
 # Proving Heron's Formula
 
-![Labelled triangle with one vertex at the origin.](./figure/triangle.png){width=80%}
+![Labelled triangle with one vertex at the origin.](./figure/triangle.png){width="80%"}
 
+<!--
 ```{tikz echo=FALSE, eval=TRUE}
 \begin{tikzpicture}
 % Draw the triangle and the right angle
@@ -24,13 +25,11 @@
 \node[above] at (8,0) {\( a - \sqrt{b^2 - h^2} \)};
 \end{tikzpicture}
 ```
+-->
+\
+Here is a simple proof of Heron's formula using Cartesian geometry. Here is a simple proof of Heron's formula using Cartesian geometry. Here is a simple proof of Heron's formula using Cartesian geometry. Here is a simple proof of Heron's formula using Cartesian geometry.
 
-Here is a simple proof of Heron's formula using Cartesian geometry.
-Here is a simple proof of Heron's formula using Cartesian geometry.
-Here is a simple proof of Heron's formula using Cartesian geometry.
-Here is a simple proof of Heron's formula using Cartesian geometry.
-
-<div class="scroll-wrapper" markdown="block">
+::: {.scroll-wrapper markdown="block"}
 $$
 \begin{aligned}
 a - \sqrt{b^2 - h^2} &= \sqrt{c^2 - h^2} \\
@@ -56,16 +55,16 @@ h &= \dfrac{1}{2a} \sqrt{-a^4 - b^4 - c^4 + 2a^2b^2 + 2a^2c^2 + 2b^2c^2} \\
     &\qquad\quad + b^2c^2 \\
 &= a^2(a^2 - b^2 - c^2) + b^2(b^2 - a^2 + c^2) + c^2(c^2 - a^2 + b^2) \\
 &= a^2(a^2 - b^2 - c^2) + b^2(-a^2 + b^2 + c^2) \\
-		&\qquad\quad + c^2(-a^2 + b^2 + c^2) \\
+        &\qquad\quad + c^2(-a^2 + b^2 + c^2) \\
 &= -a^2(-a^2 + b^2 + c^2) + b^2(-a^2 + b^2 + c^2) \\
-		&\qquad\quad + c^2(-a^2 + b^2 + c^2) \\
+        &\qquad\quad + c^2(-a^2 + b^2 + c^2) \\
 &= (-a^2 + b^2 + c^2)(-a^2 + b^2 + c^2) \\
 \alpha &= (-a^2 + b^2 + c^2)^2
 \end{aligned}
 $$
-</div>
+:::
 
-<div class="scroll-wrapper" markdown="block">
+::: {.scroll-wrapper markdown="block"}
 $$
 \begin{aligned}
 \text{Thus,}\; \Delta &= \dfrac{1}{4} \sqrt{4b^2c^2 - (-a^2 + b^2 + c^2)^2} \\
@@ -94,6 +93,7 @@ n &= (a + b + c)(b + c - a) \\
 \text{then}\; \Delta &= \sqrt{S(S - a)(S - b)(S - c)}
 \end{aligned}
 $$
-</div>
+:::
 
+\
 Heron's formula proved!

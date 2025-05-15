@@ -1,6 +1,6 @@
 # Proving Heron's Formula
 
-```{tikz echo=FALSE}
+```{tikz echo=FALSE, eval=TRUE}
 \begin{tikzpicture}
 % Draw the triangle and the right angle
 \draw (0,0)--(10,0)--(6,6)--cycle;

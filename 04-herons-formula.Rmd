@@ -1,5 +1,7 @@
 # Proving Heron's Formula
 
+![Labelled triangle with one vertex at the origin.](./figure/triangle.png){width=80%}
+
 ```{tikz echo=FALSE, eval=TRUE}
 \begin{tikzpicture}
 % Draw the triangle and the right angle

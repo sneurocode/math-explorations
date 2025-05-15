@@ -1,8 +1,6 @@
 # Proving Heron's Formula
 
-::: {.scroll-wrapper markdown="block"}
 ![Labelled triangle with one vertex at the origin.](./figure/triangle.png){width="100%"}
-:::
 
 <!--
 ```{tikz echo=FALSE, eval=TRUE}

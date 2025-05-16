@@ -27,7 +27,7 @@
 ```
 -->
 \
-Here is a simple proof of Heron's formula using Cartesian geometry. Here is a simple proof of Heron's formula using Cartesian geometry. Here is a simple proof of Heron's formula using Cartesian geometry. Here is a simple proof of Heron's formula using Cartesian geometry.
+Here is a simple proof of Heron's formula using Cartesian geometry.
 
 ::: {.scroll-wrapper markdown="block"}
 $$
